@@ -25,4 +25,3 @@ display_img_matrix(filtered_img_mat)
 std = std_sharpness_by_path(path)
 
 print(std)
-# %%

@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Utils</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Utils</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Canton%5Conedrive%5Cdocuments%5Cinsa%5Cscan%20project%5Cpython%5Crepo%5Cscan_project_blur_quantifier%5Cutils.py">c:\users\anton\onedrive\documents\insa\scan project\python\repo\scan_project_blur_quantifier\utils.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="PIL.Image.html">PIL.Image</a><br>
+</td><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-apply_filter"><strong>apply_filter</strong></a>(img_mat: numpy.ndarray, filter: Kernels.Kernel, absolute_rect: bool = False) -&gt; numpy.ndarray</dt><dd><tt>Filters&nbsp;the&nbsp;image&nbsp;then&nbsp;applies&nbsp;a&nbsp;rectification&nbsp;to&nbsp;the&nbsp;values.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+img_mat&nbsp;:&nbsp;NDArray<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Matrix&nbsp;form&nbsp;of&nbsp;an&nbsp;image<br>
+filter&nbsp;:&nbsp;Kernel<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;kernel&nbsp;to&nbsp;be&nbsp;used&nbsp;as&nbsp;filter<br>
+absolute_rect&nbsp;:&nbsp;bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;True&nbsp;to&nbsp;use&nbsp;an&nbsp;absolute&nbsp;rectification,&nbsp;False&nbsp;to&nbsp;use&nbsp;a&nbsp;relative&nbsp;rectification<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+NDArray<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;image&nbsp;matrix,&nbsp;filter&nbsp;applied&nbsp;and&nbsp;rectified</tt></dd></dl>
+ <dl><dt><a name="-convert_to_grayscale"><strong>convert_to_grayscale</strong></a>(rgb_mat: numpy.ndarray) -&gt; numpy.ndarray</dt><dd><tt>Converts&nbsp;an&nbsp;image&nbsp;to&nbsp;grayscale<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+rgb_mat&nbsp;:&nbsp;NDArray<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;image&nbsp;in&nbsp;matrix&nbsp;representation&nbsp;in&nbsp;RGB&nbsp;format&nbsp;(3&nbsp;canals)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+NDArray<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;matrix&nbsp;representation&nbsp;of&nbsp;the&nbsp;image&nbsp;in&nbsp;grayscale</tt></dd></dl>
+ <dl><dt><a name="-convolve"><strong>convolve</strong></a>(matrix: numpy.ndarray, kernel: numpy.ndarray) -&gt; numpy.ndarray[int]</dt><dd><tt>Computes&nbsp;the&nbsp;2D&nbsp;convolution&nbsp;between&nbsp;a&nbsp;larger&nbsp;matrix&nbsp;and&nbsp;a&nbsp;smaller&nbsp;kernel&nbsp;with&nbsp;no&nbsp;padding.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+matrix&nbsp;:&nbsp;NDArray<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;matrix&nbsp;to&nbsp;be&nbsp;convoluted&nbsp;upon<br>
+kernel&nbsp;:&nbsp;NDArray<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;second&nbsp;matrix,&nbsp;supposed&nbsp;to&nbsp;be&nbsp;smaller&nbsp;than&nbsp;the&nbsp;first&nbsp;one<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+NDArray[int]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;result&nbsp;of&nbsp;the&nbsp;convolution</tt></dd></dl>
+ <dl><dt><a name="-display_img_matrix"><strong>display_img_matrix</strong></a>(img_matrix: numpy.ndarray) -&gt; None</dt><dd><tt>Displays&nbsp;a&nbsp;picture&nbsp;from&nbsp;its&nbsp;matrix&nbsp;representation<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+img_matrix&nbsp;:&nbsp;NDArray<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Matrix&nbsp;representation&nbsp;of&nbsp;an&nbsp;image</tt></dd></dl>
+ <dl><dt><a name="-dot"><strong>dot</strong></a>(m1: list[list], m2: list[list])</dt><dd><tt>Computes&nbsp;an&nbsp;element-wise&nbsp;multiplication&nbsp;between&nbsp;two&nbsp;matrices&nbsp;with&nbsp;the&nbsp;same&nbsp;dimensions&nbsp;and&nbsp;sums&nbsp;all&nbsp;resulting&nbsp;terms.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+m1&nbsp;:&nbsp;list(2D)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;matrix<br>
+m2&nbsp;:&nbsp;list[list]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;matrix<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+number<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;dot&nbsp;product&nbsp;of&nbsp;the&nbsp;two&nbsp;matrices.</tt></dd></dl>
+ <dl><dt><a name="-load_image_grayscale"><strong>load_image_grayscale</strong></a>(path: str) -&gt; numpy.ndarray</dt><dd><tt>Loads&nbsp;an&nbsp;image&nbsp;and&nbsp;returns&nbsp;its&nbsp;matrix&nbsp;form.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+path&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;path&nbsp;to&nbsp;the&nbsp;image<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+NDArray<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;loaded&nbsp;image&nbsp;in&nbsp;grayscale&nbsp;matrix&nbsp;form.</tt></dd></dl>
+ <dl><dt><a name="-rectify_absolute"><strong>rectify_absolute</strong></a>(matrix: numpy.ndarray, kernel: Kernels.Kernel) -&gt; numpy.ndarray</dt><dd><tt>Rectifies&nbsp;the&nbsp;range&nbsp;of&nbsp;the&nbsp;values&nbsp;in&nbsp;the&nbsp;matrix&nbsp;so&nbsp;that&nbsp;they&nbsp;sit&nbsp;in&nbsp;[0,&nbsp;255]&nbsp;for&nbsp;later&nbsp;visualisation<br>
+Takes&nbsp;into&nbsp;account&nbsp;the&nbsp;min&nbsp;and&nbsp;max&nbsp;values&nbsp;that&nbsp;can&nbsp;be&nbsp;reached&nbsp;using&nbsp;the&nbsp;specified&nbsp;kernel.<br>
+This&nbsp;function&nbsp;may&nbsp;be&nbsp;used&nbsp;to&nbsp;compare&nbsp;two&nbsp;images&nbsp;visually.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+matrix&nbsp;:&nbsp;NDArray<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;matrix&nbsp;obtained&nbsp;after&nbsp;a&nbsp;convolution<br>
+kernel&nbsp;:&nbsp;Kernel<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;kernel&nbsp;used&nbsp;for&nbsp;the&nbsp;convolution<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+NDArray<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;matrix&nbsp;with&nbsp;rectified&nbsp;values</tt></dd></dl>
+ <dl><dt><a name="-rectify_relative"><strong>rectify_relative</strong></a>(matrix: numpy.ndarray) -&gt; numpy.ndarray</dt><dd><tt>Rectifies&nbsp;the&nbsp;range&nbsp;of&nbsp;the&nbsp;values&nbsp;in&nbsp;the&nbsp;matrix&nbsp;so&nbsp;that&nbsp;they&nbsp;sit&nbsp;in&nbsp;[0,&nbsp;255]&nbsp;for&nbsp;later&nbsp;visualisation.<br>
+Takes&nbsp;into&nbsp;account&nbsp;the&nbsp;minimum&nbsp;and&nbsp;maximum&nbsp;values&nbsp;encountered&nbsp;in&nbsp;the&nbsp;matrix.<br>
+The&nbsp;minimum&nbsp;value&nbsp;encountered&nbsp;is&nbsp;offset&nbsp;at&nbsp;0.<br>
+The&nbsp;maximum&nbsp;value&nbsp;encountered&nbsp;is&nbsp;offest&nbsp;at&nbsp;255.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+matrix&nbsp;:&nbsp;NDArray<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;matrix<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+NDArray<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;matrix&nbsp;with&nbsp;rectified&nbsp;values</tt></dd></dl>
+ <dl><dt><a name="-save_img_matrix"><strong>save_img_matrix</strong></a>(img_matrix: numpy.ndarray, path: str) -&gt; None</dt><dd><tt>Saves&nbsp;a&nbsp;matrix&nbsp;image&nbsp;on&nbsp;the&nbsp;drive.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+img_matrix&nbsp;:&nbsp;NDArray<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Matrix&nbsp;representation&nbsp;of&nbsp;an&nbsp;image<br>
+path&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Path&nbsp;to&nbsp;the&nbsp;location&nbsp;where&nbsp;the&nbsp;image&nbsp;should&nbsp;be&nbsp;saved<br>
+&nbsp;<br>
+Raises<br>
+------<br>
+ValueError<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;the&nbsp;output&nbsp;format&nbsp;could&nbsp;not&nbsp;be&nbsp;determined.<br>
+OSError<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;the&nbsp;file&nbsp;could&nbsp;not&nbsp;be&nbsp;written.</tt></dd></dl>
+ <dl><dt><a name="-smarter_dot"><strong>smarter_dot</strong></a>(m1: numpy.ndarray, m2: numpy.ndarray)</dt><dd><tt>Computes&nbsp;the&nbsp;dot&nbsp;product&nbsp;between&nbsp;two&nbsp;matrices&nbsp;with&nbsp;the&nbsp;same&nbsp;dimensions,&nbsp;using&nbsp;numpy.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+m1&nbsp;:&nbsp;NDArray<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;matrix<br>
+m2&nbsp;:&nbsp;NDArray<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;matrix<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+number<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;dot&nbsp;product&nbsp;of&nbsp;the&nbsp;two&nbsp;matrices</tt></dd></dl>
+ <dl><dt><a name="-std_over_set"><strong>std_over_set</strong></a>(path_list: list[str], zone: tuple[int, int, int] = None, kernel: Kernels.Kernel = Kernel(9, 9)
+[[  0   1   1   2   2   2   1   1   0]
+ [  1   2   4   5   5   5   4   2   1]
+ [  1   4   5   3   0   3   5   4   1]
+ [  2   5   3 -12 -24 -12   3   5   2]
+ [  2   5   0 -24 -40 -24   0   5   2]
+ [  2   5   3 -12 -24 -12   3   5   2]
+ [  1   4   5   3   0   3   5   4   1]
+ [  1   2   4   5   5   5   4   2   1]
+ [  0   1   1   2   2   2   1   1   0]]) -&gt; numpy.ndarray[float]</dt><dd><tt>Iterates&nbsp;over&nbsp;image&nbsp;files&nbsp;and&nbsp;returns&nbsp;their&nbsp;STD&nbsp;sharpness&nbsp;value&nbsp;in&nbsp;order<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+path_list&nbsp;:&nbsp;list[str]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;paths&nbsp;to&nbsp;the&nbsp;images&nbsp;studied<br>
+zone_coor&nbsp;:&nbsp;tuple[Coordinate,&nbsp;Coordinate,&nbsp;Size],&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;square&nbsp;window&nbsp;on&nbsp;which&nbsp;to&nbsp;focus&nbsp;in&nbsp;the&nbsp;images,&nbsp;defined&nbsp;by&nbsp;the&nbsp;upper&nbsp;left&nbsp;corner&nbsp;and&nbsp;size&nbsp;of&nbsp;the&nbsp;window,&nbsp;format:&nbsp;(x,&nbsp;y,&nbsp;size),&nbsp;by&nbsp;default&nbsp;None<br>
+kernel&nbsp;:&nbsp;Kernel,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;kernel&nbsp;to&nbsp;use&nbsp;for&nbsp;the&nbsp;convolution,&nbsp;by&nbsp;default&nbsp;gaussian_laplacian<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+NDArray[float]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;An&nbsp;array&nbsp;containing&nbsp;the&nbsp;STD&nbsp;sharpness&nbsp;value&nbsp;for&nbsp;each&nbsp;image</tt></dd></dl>
+ <dl><dt><a name="-std_sharpness"><strong>std_sharpness</strong></a>(img_matrix: numpy.ndarray, zone: tuple[int, int, int] = None, kernel: Kernels.Kernel = Kernel(9, 9)
+[[  0   1   1   2   2   2   1   1   0]
+ [  1   2   4   5   5   5   4   2   1]
+ [  1   4   5   3   0   3   5   4   1]
+ [  2   5   3 -12 -24 -12   3   5   2]
+ [  2   5   0 -24 -40 -24   0   5   2]
+ [  2   5   3 -12 -24 -12   3   5   2]
+ [  1   4   5   3   0   3   5   4   1]
+ [  1   2   4   5   5   5   4   2   1]
+ [  0   1   1   2   2   2   1   1   0]]) -&gt; float</dt><dd><tt>Returns&nbsp;a&nbsp;sharpness&nbsp;indicator&nbsp;for&nbsp;a&nbsp;given&nbsp;image&nbsp;using&nbsp;the&nbsp;standard&nbsp;deviation<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+img_matrix&nbsp;:&nbsp;NDArray<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;grayscale&nbsp;image&nbsp;in&nbsp;matrix&nbsp;form<br>
+zone:&nbsp;tuple[Coordinate,&nbsp;Coordinate,&nbsp;Size],&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;square&nbsp;window&nbsp;on&nbsp;which&nbsp;to&nbsp;focus&nbsp;in&nbsp;the&nbsp;image,&nbsp;defined&nbsp;by&nbsp;the&nbsp;upper&nbsp;left&nbsp;corner&nbsp;and&nbsp;size&nbsp;of&nbsp;the&nbsp;window,&nbsp;format:&nbsp;(x,&nbsp;y,&nbsp;size),&nbsp;by&nbsp;default&nbsp;None<br>
+kernel&nbsp;:&nbsp;Kernel,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;kernel&nbsp;to&nbsp;be&nbsp;used&nbsp;as&nbsp;filter,&nbsp;by&nbsp;default&nbsp;gaussian_laplacian<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;STD&nbsp;sharpness&nbsp;indicator&nbsp;for&nbsp;the&nbsp;image</tt></dd></dl>
+ <dl><dt><a name="-std_sharpness_by_path"><strong>std_sharpness_by_path</strong></a>(path: str, zone: tuple[int, int, int] = None, kernel: Kernels.Kernel = Kernel(9, 9)
+[[  0   1   1   2   2   2   1   1   0]
+ [  1   2   4   5   5   5   4   2   1]
+ [  1   4   5   3   0   3   5   4   1]
+ [  2   5   3 -12 -24 -12   3   5   2]
+ [  2   5   0 -24 -40 -24   0   5   2]
+ [  2   5   3 -12 -24 -12   3   5   2]
+ [  1   4   5   3   0   3   5   4   1]
+ [  1   2   4   5   5   5   4   2   1]
+ [  0   1   1   2   2   2   1   1   0]]) -&gt; float</dt><dd><tt>Returns&nbsp;a&nbsp;sharpness&nbsp;indicator&nbsp;for&nbsp;a&nbsp;given&nbsp;image&nbsp;using&nbsp;the&nbsp;standard&nbsp;deviation<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+path&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;path&nbsp;to&nbsp;the&nbsp;image&nbsp;file<br>
+zone:&nbsp;tuple[Coordinate,&nbsp;Coordinate,&nbsp;Size],&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;square&nbsp;window&nbsp;on&nbsp;which&nbsp;to&nbsp;focus&nbsp;in&nbsp;the&nbsp;image,&nbsp;defined&nbsp;by&nbsp;the&nbsp;upper&nbsp;left&nbsp;corner&nbsp;and&nbsp;size&nbsp;of&nbsp;the&nbsp;window,&nbsp;format:&nbsp;(x,&nbsp;y,&nbsp;size),&nbsp;by&nbsp;default&nbsp;None<br>
+kernel&nbsp;:&nbsp;Kernel,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;kernel&nbsp;to&nbsp;be&nbsp;used&nbsp;as&nbsp;filter,&nbsp;by&nbsp;default&nbsp;gaussian_laplacian<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;STD&nbsp;sharpness&nbsp;indicator&nbsp;for&nbsp;the&nbsp;image</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>ZoneDescription</strong> = tuple[int, int, int] | None<br>
+<strong>gaussian_laplacian</strong> = Kernel(9, 9)
+[[  0   1   1   2   2   2   1   1  ...   2   1]
+ [  0   1   1   2   2   2   1   1   0]]</td></tr></table>
+</body></html>

@@ -1,5 +1,8 @@
-from numpy import ndarray, array
+from numpy import array
 class Kernel:
+    """
+    Represents a matrix kernel along with useful properties (height, width, max, min)
+    """
     def __init__(self, matrix: list[list]) -> None:
         self.matrix = array(matrix)
 
